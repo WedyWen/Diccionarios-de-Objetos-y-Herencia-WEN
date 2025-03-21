@@ -96,6 +96,12 @@ namespace Diccionarios_de_Objetos_y_Herencia_WEN
 
         }
 
+        public void EliminarCoche()
+        {
+            Console.WriteLine("Dame el id del coche a eliminar");
+            int id = Convert.ToInt32(Console.ReadLine());
 
+                diccionariocoche.Remove(id);
+        }
     }
 }
