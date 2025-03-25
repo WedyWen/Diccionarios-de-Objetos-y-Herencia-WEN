@@ -103,5 +103,69 @@ namespace Diccionarios_de_Objetos_y_Herencia_WEN
 
                 diccionariocoche.Remove(id);
         }
+
+
+       public void EliminarCamion()
+        {
+            Console.WriteLine("Dame el id del camion a eliminar");
+            int id = Convert.ToInt32(Console.ReadLine());
+
+            diccionariocamion.Remove(id);
+        }
+
+        public void ActualizarCoche()
+        {
+            Console.WriteLine("Dame el id del coche a actualizar");
+            int id = Convert.ToInt32(Console.ReadLine());
+            var coche = diccionariocoche.FirstOrDefault(x => x.Value.ID == id);
+
+            Console.WriteLine("Dame el nuevo ID:");
+            coche.Value.ID = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Dame la nueva marca:");
+            coche.Value.Marca = Console.ReadLine();
+
+            Console.WriteLine("Dame el nuevo modelo:");
+            coche.Value.Modelo = Console.ReadLine();
+
+            Console.WriteLine("Dame el año");
+            coche.Value.Año = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Dame el numero de puertas:");
+            coche.Value.NumPuertas = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Coche actualizado EXITOSAMENTE");
+        }
+
+        public void ActualizarCamion()
+        {
+            Console.WriteLine("Dame el id del camion a actualizar");
+            int id = Convert.ToInt32(Console.ReadLine());
+            var camion = diccionariocamion.FirstOrDefault(x => x.Value.ID == id);
+
+            Console.WriteLine("Dame el nuevo ID:");
+            camion.Value.ID = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Dame la nueva marca:");
+            camion.Value.Marca = Console.ReadLine();
+
+            Console.WriteLine("Dame el nuevo modelo:");
+            camion.Value.Modelo = Console.ReadLine();
+
+            Console.WriteLine("Dame el año");
+            camion.Value.Año = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Dame la capacidad de carga:");
+            camion.Value.CapacidadCarga = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Camion actualizado EXITOSAMENTE");
+        }
+
+
+
+
+
+
     }
+
 }
